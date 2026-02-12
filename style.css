@@ -1,3 +1,17 @@
+/* Animation ours énervé */
+.bear-img.angry {
+    filter: hue-rotate(-30deg) brightness(1.2) contrast(1.3) saturate(2);
+    animation: shakeBear 0.4s infinite;
+}
+
+@keyframes shakeBear {
+    0% { transform: translateX(0) rotate(0deg); }
+    20% { transform: translateX(-10px) rotate(-5deg); }
+    40% { transform: translateX(10px) rotate(5deg); }
+    60% { transform: translateX(-10px) rotate(-5deg); }
+    80% { transform: translateX(10px) rotate(5deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
 @font-face {
     font-family: "Love";
     src: url(./Love.ttf);
