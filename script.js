@@ -7,7 +7,12 @@ function increaseSize() {
     document.querySelectorAll('#no-gif').forEach(function(el) {
         el.remove();
     });
-    // Créer et afficher le GIF
+    // Supprimer l'ours en peluche principal s'il existe
+    const bear = document.querySelector('.bear-img');
+    if (bear) {
+        bear.style.display = 'none';
+    }
+    // Créer et afficher le GIF "non"
     const gif = document.createElement('img');
     gif.src = 'https://img.over-blog-kiwi.com/0/98/03/83/20200529/ob_f5525c_abf1020a.gif';
     gif.alt = 'gif triste';
