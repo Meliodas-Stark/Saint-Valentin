@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "Love";
+    src: url(./Love.ttf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(251, 251, 251);
+    font-family: "Love", sans-serif;
+    height: 100vh;
+}
+
+.valentine-card {
+    background: linear-gradient(135deg, #ffe6f7 60%, #ffd6e0 100%);
+    border: 4px solid #ff69b4;
+    border-radius: 30px;
+    box-shadow: 0 8px 24px rgba(255, 105, 180, 0.2);
+    padding: 40px 30px;
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+    animation: popCard 1s ease;
+}
+
+.valentine-card h1 {
+    font-family: 'Pacifico', cursive, sans-serif;
+    font-size: 2.2em;
+    color: #d72660;
+    line-height: 1.4;
+}
+
+.highlight {
+    color: #ff69b4;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: highlightFade 1.5s ease;
+}
+
+.valentine {
+    color: #d72660;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 2px 8px #ffd6e0;
+    animation: heartBeat 1.2s infinite;
+}
+
+.wish {
+    color: #ff69b4;
+    font-style: italic;
+    font-size: 1.1em;
+    animation: wishGlow 2s infinite alternate;
+}
+
+@keyframes popCard {
+    0% { transform: scale(0.8); opacity: 0; }
+    80% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes highlightFade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes wishGlow {
+    0% { text-shadow: 0 0 10px #ff69b4; }
+    100% { text-shadow: 0 0 30px #ff69b4, 0 0 10px #ffd6e0; }
+}
+.btn {
+    display: flex;
+    gap: 30px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.yes {
+    background-color: #80ED99;
+    transition: width .5s, height .5s;
+}
+
+.no {
+    background-color: #D45E5E;
+}
+
+h1 {
+    color: #f08080;
+    text-transform: uppercase;
+    font-size: 40px;
+}
